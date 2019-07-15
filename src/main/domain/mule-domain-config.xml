@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain:mule-domain 
+        xmlns="http://www.mulesoft.org/schema/mule/core"
+        xmlns:http="http://www.mulesoft.org/schema/mule/http"
+        xmlns:domain="http://www.mulesoft.org/schema/mule/domain"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:jms="http://www.mulesoft.org/schema/mule/jms"
+        xmlns:spring="http://www.springframework.org/schema/beans"
+        xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+		xsi:schemaLocation="http://www.mulesoft.org/schema/mule/db 
+		http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+		http://www.mulesoft.org/schema/mule/http 
+		http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+		http://www.mulesoft.org/schema/mule/ws 
+		http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+		http://www.mulesoft.org/schema/mule/xml 
+		http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
+		http://www.mulesoft.org/schema/mule/jms 
+		http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-current.xsd
+		http://www.mulesoft.org/schema/mule/core 
+		http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/ee/tracking 
+		http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+		http://www.mulesoft.org/schema/mule/scripting 
+		http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd
+		http://www.mulesoft.org/schema/mule/domain 
+		http://www.mulesoft.org/schema/mule/domain/current/mule-domain.xsd">
+
+    <!-- configure here resource to be shared within the domain -->
+	<jms:activemq-connector name="Domain-MQ" brokerURL="tcp://localhost:61616" validateConnections="true" maxRedelivery="-1" persistentDelivery="true" doc:name="Active MQ" numberOfConsumers="10" >
+        <reconnect-forever frequency="10000"/>
+    </jms:activemq-connector>    
+    <jms:activemq-connector name="Active-MQ-1" brokerURL="tcp://localhost:61616" validateConnections="true" maxRedelivery="-1" persistentDelivery="true" doc:name="Active MQ" numberOfConsumers="1" >
+        <reconnect-forever frequency="10000"/>
+    </jms:activemq-connector> 
+    <jms:activemq-connector name="Active-MQ-5" brokerURL="tcp://localhost:61616" validateConnections="true" maxRedelivery="-1" persistentDelivery="true" doc:name="Active MQ" numberOfConsumers="5" >
+        <reconnect-forever frequency="10000"/>
+    </jms:activemq-connector> 
+    <jms:activemq-connector name="Active-MQ-10" brokerURL="tcp://localhost:61616" validateConnections="true" maxRedelivery="-1" persistentDelivery="true" doc:name="Active MQ" numberOfConsumers="10" >
+        <reconnect-forever frequency="10000"/>
+    </jms:activemq-connector> 
+    <jms:activemq-connector name="Active-MQ-20" brokerURL="tcp://localhost:61616" validateConnections="true" maxRedelivery="-1" persistentDelivery="true" doc:name="Active MQ" numberOfConsumers="20" >
+        <reconnect-forever frequency="10000"/>
+    </jms:activemq-connector>   
+    <jms:activemq-connector name="Active-MQ-30" brokerURL="tcp://localhost:61616" validateConnections="true" maxRedelivery="-1" persistentDelivery="true" doc:name="Active MQ" numberOfConsumers="30" >
+        <reconnect-forever frequency="10000"/>
+    </jms:activemq-connector>   
+     <jms:activemq-connector name="Active-MQ-40" brokerURL="tcp://localhost:61616" validateConnections="true" maxRedelivery="-1" persistentDelivery="true" doc:name="Active MQ" numberOfConsumers="40" >
+        <reconnect-forever frequency="10000"/>
+    </jms:activemq-connector>   
+     <jms:activemq-connector name="Active-MQ-50" brokerURL="tcp://localhost:61616" validateConnections="true" maxRedelivery="-1" persistentDelivery="true" doc:name="Active MQ" numberOfConsumers="50" >
+        <reconnect-forever frequency="10000"/>
+    </jms:activemq-connector>   
+</domain:mule-domain>
